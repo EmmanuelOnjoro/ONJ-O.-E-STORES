@@ -1,0 +1,130 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.section-a{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 20vh);
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f09d51;    
+    color: #fff;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main {    
+    height: 500px;
+    max-width: 400px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-method{
+
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mpesa-icon {
+    /* Style this div to create the M-Pesa logo */
+    background-color: green;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.mpesa-icon span{
+    font-style: bold;
+}
+
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #f09d51;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    height: 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+
+button[type="submit"]:hover {
+    background-color: green;
+}
+
+@media screen and (max-width: 808x) {
+    body{
+        font-size: 70px;
+        display: flex;
+    }
+  .main{
+        height: 500px;
+        max-width: 200px;
+        border-radius: 10px;
+        margin: auto;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .section-a{
+        display: block;
+        height: 70vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+}

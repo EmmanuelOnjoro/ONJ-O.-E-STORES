@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pay.css">
+    <title>Payment Page</title>
+</head>
+
+<body>
+
+        <nav class="navbar">
+            <div class="burger">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+            </div>
+        
+            <div class="logo">
+                <span class="logo-text">
+                    <i class="fa fa-book" style="margin-right: 2.7em;">
+                        ONJ'O.F
+                    </i>
+                    <span style="color: #f09d51; font-size: 1.1em;">
+                        JUNIOR
+                    </span>
+                </span>
+            </div>
+            <div class="menubar">
+                <ul class="list">
+                    <li class="list-items"><a href="index.html">Home</a></li>
+                    <li class="list-items"><a href="#product">Products</a></li>
+                    <li class="list-items"><a href="index.html">Prices</a></li>
+                    <li class="list-items"><a href="about.html">About</a></li>
+                    <li class="list-items"><a href="contact.html">Contacts</a></li>
+                </ul>
+            </div>
+        
+            <div class="cart">
+                <i class="fa fa-shopping-cart fa-1x"></i>
+                <div class="number-of-items">
+                    <span class="noi">0</span>
+                </div>
+            </div>
+        </nav>
+
+
+        
+    <header>
+        <h1>Payment Details</h1>
+    </header>
+<div class="section-a">
+    <main>
+        <div class="payment-method">
+            <div class="mpesa-logo">
+                <!-- Safaricom M-Pesa Logo -->
+                <div class="mpesa-icon">
+                    <span style="color: #fff; ">M<span style="color: red;">~<span
+                                style="color: white;">PESA</span></span></span>
+                    <!-- You can style this div with CSS to create the M-Pesa logo -->
+                </div>
+            </div>
+            <p>Pay with Safaricom M-Pesa</p>
+        </div>
+    
+        <form action="#" method="post">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter amount" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+    
+            <button type="submit" class="pay-btn">Proceed to Payment</button>
+        </form>
+    </main>
+
+    
+
+
+    <script>
+        // JavaScript to open the M-Pesa app
+        document.getElementById("pay-btn").addEventListener("click", function () {
+            const amount = document.getElementById("amount").value;
+            const phone = document.getElementById("phone").value;
+
+            // Replace 'your_shortcode' and 'your_lipa_na_mpesa_online_passkey' with your actual values
+            const shortcode = 'your_shortcode';
+            const passkey = 'your_lipa_na_mpesa_online_passkey';
+
+            // Construct the URL to open the M-Pesa app
+            const mpesaUrl = `mpesa://?action=sendmoney&phone=${shortcode}&amount=${amount}&paybill=${shortcode}&account=${phone}&passkey=${passkey}`;
+
+            // Open the M-Pesa app if available, or provide a fallback URL
+            window.location.href = mpesaUrl;
+        });
+    </script>
+
+    <script src="product.json"></script>
+    <script src="java.js"></script>
+</body>
+
+</html>
